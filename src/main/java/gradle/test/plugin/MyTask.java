@@ -18,7 +18,7 @@ public class MyTask extends DefaultTask {
     @TaskAction
     public void generateStructureTask() throws IOException {
         FileModel file = FileModel.builder()
-                .path("build.gradle")
+                .path("build.gradle.generated")
                 .content(getContentFromResource())
                 .build();
 

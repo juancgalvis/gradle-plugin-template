@@ -20,7 +20,19 @@ dependencies {
 }
 
 pluginBundle {
-    website = 'No Web Site'
-    vcsUrl = '<uri to project source repository>'
-    tags = ['tags', 'for', 'your', 'plugins']
+    website = 'https://github.com/juancgalvis/gradle-plugin-template'
+    vcsUrl = 'https://github.com/juancgalvis/gradle-plugin-template'
+    tags = ['gradle', 'template']
+}
+
+gradlePlugin {
+    plugins {
+        gradleTestPlugin {
+            id = 'gradle.test.plugin'
+            displayName = 'JC Gradle Plugin'
+            description = 'Gradle test'
+            implementationClass = 'gradle.test.plugin.PluginTest'
+            version = '0.0.1'
+        }
+    }
 }
