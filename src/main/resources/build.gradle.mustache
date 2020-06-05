@@ -1,0 +1,21 @@
+buildscript {
+	ext {
+		springBootVersion = '{{springBootVersion}}'
+		springCloudVersion = 'Greenwich.M1'
+		sonarVersion = '{{sonarVersion}}'
+		jacocoVersion = '{{jacocoVersion}}'
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version "{{springBootVersion}}"
+	id 'org.sonarqube' version "{{sonarVersion}}"
+	id 'jacoco'
+}
+
+sonarqube {
+	properties {
+		property "sonar.sourceEnconding", "UTF-8"
+	}
+}
+apply from: './main.gradle'
